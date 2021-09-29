@@ -1,5 +1,5 @@
 # /usr/bin/python2.7
-# written by Josepj  on 29/09/2021
+# written by Ego Joseph  on 29/09/2021 for Alfred and Victoria
 # copyleft free software
 
 import boto.ec2
