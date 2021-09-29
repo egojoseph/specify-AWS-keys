@@ -1,6 +1,6 @@
 # /usr/bin/python2.7
 # written by Ego Joseph  on 29/09/2021 for Alfred and Victoria
-# copyleft free software
+# Interview with Alfred and Victoria
 
 import boto.ec2
 import sys
