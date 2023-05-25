@@ -59,3 +59,4 @@ python regression_model_v2/predictor.py
 This project is open to improvement. Contributions are welcome through pull requests and issues.
 
 Author: Ego Joseph
+Lead Developer and Maintainer  
