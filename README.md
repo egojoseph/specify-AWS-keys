@@ -1,68 +1,36 @@
-# /usr/bin/python2.7
-# written by Ego Joseph  on 29/09/2021 for Alfred and Victoria
-# specify AWS keys
+InsightPredictor
+InsightPredictor is a structured machine learning pipeline focused on regression-based prediction using synthetic data. It simulates a real-world AI development workflow — including data generation, training, evaluation, and prediction — backed by version-controlled contributions with accurate historical context.
 
-import boto.ec2
-import sys
+This project was created and is maintained by Ego Joseph. It is open-source and welcomes public contributions to enhance its scope, features, and practical applications.
 
-# specify AWS keys
-auth = {"aws_access_key_id": "<key_id>", "aws_secret_access_key": "<access_key>"}
+🔍 Features
+Synthetic data generation for reproducible regression tasks
+Linear regression model training and evaluation
+Prediction on new inputs using saved models
+Backdated Git commits for historical project tracking
+🗂️ Project Structure
+InsightPredictor/ ├── data/ # Synthetic datasets ├── regression_model_v2/ # All model-related code │ ├── data_generator.py │ ├── regression_trainer.py │ ├── model_evaluator.py │ └── predictor.py ├── tests/ # Unit tests (optional) ├── requirements.txt └── README.md
 
-def main():
-    # read arguments from the command line and 
-    # check whether at least two elements were entered
-    if len(sys.argv) < 2:
-	print "Usage: python aws.py {start|stop}\n"
-	sys.exit(0)
-    else:
-	action = sys.argv[1] 
+⚙️ Technologies
+Python 3
+pandas, numpy
+scikit-learn
+joblib
+🚀 How to Run
+# Generate synthetic data
+python regression_model_v2/data_generator.py
 
-    if action == "start":
-	startInstance()
-    elif action == "stop":
-    	stopInstance()
-    else:
-    	print "Usage: python aws.py {start|stop}\n"
+# Train the model
+python regression_model_v2/regression_trainer.py
 
-def startInstance():
-    print "Starting the instance..."
+# Evaluate the model
+python regression_model_v2/model_evaluator.py
 
-    # change "eu-west-1" region if different
-    try:
-        ec2 = boto.ec2.connect_to_region("eu-west-1", **auth)
+# Make predictions
+python regression_model_v2/predictor.py
 
-    except Exception, e1:
-        error1 = "Error1: %s" % str(e1)
-        print(error1)
-        sys.exit(0)
+🤝 Contributions
+This project is open to improvement. Contributions are welcome through pull requests and issues.
 
-    # change instance ID appropriately  
-    try:
-         ec2.start_instances(instance_ids="i-12345678")
-
-    except Exception, e2:
-        error2 = "Error2: %s" % str(e2)
-        print(error2)
-        sys.exit(0)
-
-def stopInstance():
-    print "Stopping the instance..."
-
-    try:
-        ec2 = boto.ec2.connect_to_region("eu-west-1", **auth)
-
-    except Exception, e1:
-        error1 = "Error1: %s" % str(e1)
-        print(error1)
-        sys.exit(0)
-
-    try:
-         ec2.stop_instances(instance_ids="i-12345678")
-
-    except Exception, e2:
-        error2 = "Error2: %s" % str(e2)
-        print(error2)
-        sys.exit(0)
-
-if __name__ == '__main__':
-    main()
+Author: Ego Joseph
+Lead Developer and Maintainer  
