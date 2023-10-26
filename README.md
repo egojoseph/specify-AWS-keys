@@ -1,6 +1,6 @@
 # /usr/bin/python2.7
 # written by Ego Joseph  on 29/09/2021 for Alfred and Victoria
-# specify AWS key
+# specify AWS keys
 
 import boto.ec2
 import sys
@@ -21,7 +21,7 @@ def main():
 	startInstance()
     elif action == "stop":
     	stopInstance()
-    els:
+    else:
     	print "Usage: python aws.py {start|stop}\n"
 
 def startInstance():
