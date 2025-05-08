@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/40712264-5d2d-4498-8063-b006fcbfdc82)# InsightPredictor
+# InsightPredictor
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![scikit-learn](https://img.shields.io/badge/Scikit--Learn-Regression-orange)
 ![Status](https://img.shields.io/badge/Status-Maintained-brightgreen)
@@ -21,16 +21,7 @@ This project was created and is maintained by **Ego Joseph**. It is open-source 
 
 ## 🗂️ Project Structure
 
-InsightPredictor/
-├── data/ # Synthetic datasets
-├── regression_model_v2/ # All model-related code
-│ ├── data_generator.py
-│ ├── regression_trainer.py
-│ ├── model_evaluator.py
-│ └── predictor.py
-├── tests/ # Unit tests
-├── requirements.txt
-└── README.md
+![image](https://github.com/user-attachments/assets/40712264-5d2d-4498-8063-b006fcbfdc82)
 
 
 ---
